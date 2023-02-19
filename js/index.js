@@ -26,7 +26,7 @@ btn.addEventListener("click", event => {
     btn.disabled = true
     const checTime = setInterval(() => {
         time += 1
-        timer.textContent = time
+        timer.textContent = time + " sec"
         
     }, 1000)
     const checkList = setInterval(() => {
