@@ -27,42 +27,15 @@ body {
 @media screen and (max-width: 580px) {
   .lastText {
     padding: 10px;
-    font-size: 10px;
+    font-size: 20px;
     width: 84%;
   }
 }
 @media screen and (min-width: 581px) {
   .lastText {
-    width: 86%;
+    width: 85%;
   }
 }
-.firstText {
-  font-size: 20px;
-  margin-top: 80px;
-  width: 88%;
-  margin-left: 25%;
-  margin-right: 75%;
-  max-width: 50%;
-  max-height: 50px;
-  border: 2px solid #000000;
-  border-radius: 20px;
-  padding: 20px;
-  overflow-y: hidden;
-  opacity: 0;
-  box-shadow: inset 0 0 2000px rgba(4, 193, 14, 0.245);
-}
-@media screen and (max-width: 580px) {
-  .firstText {
-    padding: 20px;
-    font-size: 10px;
-  }
-}
-@media screen and (min-width: 581px) {
-  .firstText {
-    margin-left: 30%;
-  }
-}
-
 .container {
   display: flex;
   justify-content: center;
