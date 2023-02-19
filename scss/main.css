@@ -67,12 +67,12 @@ body {
 }
 @media screen and (min-width: 581px) {
   .timer {
-    width: 50px;
+    width: 100px;
   }
 }
 @media screen and (min-width: 860px) {
   .timer {
-    width: 40px;
+    width: 100px;
   }
 }
 
