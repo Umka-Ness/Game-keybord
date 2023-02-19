@@ -40,6 +40,7 @@ body {
     @media screen and (max-width: 580px) {
             padding: 10px;
             font-size: 10px;
+            width: 84%;
         }
     
         @media screen and (min-width:581px) {
@@ -132,7 +133,7 @@ body {
         
         
                 100% {
-                    transform: translateY(130px) translateX(-35px);
+                    transform: translateY(106px) translateX(-35px);
                 }
         
             }
@@ -153,7 +154,28 @@ body {
         
         
                 100% {
-                    transform: translateY(100px) translateX(-35px);
+                    transform: translateY(55px) translateX(-35px);
+                }
+        
+            }
+    
+        }
+    @media screen and (min-width: 860px) {
+        top: 150%;
+        animation: slide-top 2.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+        @keyframes slide-top {
+                0% {
+                    transform: translateY(-300px);
+                }
+        
+                20% {
+                    transform: translateX(-10px);
+                }
+        
+        
+                100% {
+                    transform: translateY(70px) translateX(-35px);
                 }
         
             }
@@ -174,10 +196,15 @@ body {
             margin-top: 30%;
     
         }
-        @media screen and (min-width:581px) {
+    @media screen and (min-width:581px) {
+        width: 200px;
+        height: 200px;
+        margin-top: 13%;
+    }
+    @media screen and (min-width:860px) {
             width: 200px;
             height: 200px;
-            margin-top: 13%;
+            margin-top: 7%;
         }
 }
 
@@ -203,7 +230,13 @@ body {
     
     }
     @media screen and (min-width: 581px) {
-            margin-top: 65%;
+            margin-top: 55%;
+            margin-left: 32%;
+            font-size: 30px;
+    
+    }
+    @media screen and (min-width: 860px) {
+            margin-top: 55%;
             margin-left: 32%;
             font-size: 30px;
     
@@ -219,16 +252,19 @@ body {
 
     padding: 20px 40px 20px 40px;
     border-radius: 15px;
-
     @media screen and (max-width: 580px) {
         position: absolute;
         padding: 10px 20px 10px 20px;
         margin-left: 80%;
         margin-right: 20%;
-        margin-top: 56%;
+        margin-top: 50%;
     }
     @media screen and (min-width:581px) {
         margin-left: 80%;
-        margin-top: 33%;
+        margin-top: 28%;
+    }
+    @media screen and (min-width:860px) {
+        margin-left: 80%;
+        margin-top: 15%;
     }
 }
