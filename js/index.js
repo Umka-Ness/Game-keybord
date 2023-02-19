@@ -10,7 +10,6 @@ let devList = "Набери небольшой текст. Проверь, ск�
 let index = 0
 
 document.body.addEventListener("keydown", e => {
-    inputHidden.focus()
     console.log("Keydown: ", e);
     if (btn.disabled === true) {
         e.preventDefault
@@ -22,6 +21,7 @@ document.body.addEventListener("keydown", e => {
 
 // Only Timer
 btn.addEventListener("click", event => {
+    inputHidden.focus()
     let sec = 0
     let min = 0
     inputText.value = devList
