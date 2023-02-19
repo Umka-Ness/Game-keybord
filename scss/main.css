@@ -1,0 +1,112 @@
+body {
+  background-image: url("/img/1643005908_15-phonoteka-org-p-fon-les-multyashnii-15.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-y: hidden;
+}
+
+.hero-poz {
+  position: relative;
+}
+
+.lastText {
+  display: flex;
+  color: black;
+  font-size: 20px;
+  border: 2px solid #000000;
+  border-radius: 20px;
+  max-height: 50px;
+  width: 88%;
+  padding: 20px;
+  margin-top: 200px;
+  margin-left: 90px;
+  overflow-y: hidden;
+  box-shadow: inset 0 0 2000px rgba(7, 236, 19, 0.832);
+}
+
+.firstText {
+  font-size: 20px;
+  margin-top: 80px;
+  margin-left: 370px;
+  max-width: 50%;
+  border: 2px solid #000000;
+  border-radius: 20px;
+  padding: 20px;
+  overflow-y: hidden;
+  box-shadow: inset 0 0 2000px rgba(7, 236, 19, 0.832);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column-reverse;
+  gap: 170px;
+  margin-top: 25%;
+  margin-left: 25%;
+  width: 100%;
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #12c64b;
+  box-shadow: inset 0 0 2000px rgba(7, 236, 19, 0.407);
+  border-radius: 15px;
+  font-size: 20px;
+  color: #ffae00;
+  width: 50px;
+  margin-left: 650px;
+}
+
+.slide-top {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  bottom: 78px;
+  left: 80px;
+  z-index: 1;
+  animation: slide-top 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@keyframes slide-top {
+  0% {
+    transform: translateY(-30px);
+  }
+  20% {
+    transform: translateX(-20px);
+  }
+  100% {
+    transform: translateY(150px) translateX(10px);
+  }
+}
+.box {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  z-index: 50;
+}
+
+.coins {
+  position: absolute;
+  /* top: 130px;
+  left: 90px; */
+  margin-top: 50%;
+  margin-left: 35%;
+  z-index: 51;
+  font-size: 30px;
+  border: 2px solid rgba(64, 59, 52, 0.631372549);
+  background: #ecba05;
+  border-radius: 15px;
+  padding: 10px;
+  box-shadow: inset 0 0 20px rgba(236, 137, 7, 0.832);
+}
+
+.btn-go {
+  position: absolute;
+  margin-left: 90%;
+  margin-top: 8%;
+  padding: 20px 40px 20px 40px;
+  border-radius: 15px;
+}/*# sourceMappingURL=main.css.map */

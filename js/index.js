@@ -22,7 +22,7 @@ document.body.addEventListener("keydown", e => {
 // Only Timer
 btn.addEventListener("click", event => {
     let time = 0
-    inputText.textContent = devList
+    inputText.value = devList
     btn.disabled = true
     const checTime = setInterval(() => {
         time += 1
@@ -42,17 +42,15 @@ btn.addEventListener("click", event => {
 
 // replace color in Input
 function indexPlus(key) {
-    inputText.textContent = devList
+    inputText.value = devList
     if (key === textList[index]) {
         inputTextFirst.append(textList[index])
         inputTextFirst.style.color = "#808080"
 
         devList = devList.slice(1)
-        inputText.textContent = devList
+        inputText.value = devList
 
         return
-    }
-    else {
     }
     
 }
