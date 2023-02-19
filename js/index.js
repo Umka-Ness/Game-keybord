@@ -10,7 +10,7 @@ let devList = "Набери небольшой текст. Проверь, ск�
 let index = 0
 
 document.body.addEventListener("keydown", e => {
-    inputHidden.style.focus = "true"
+    inputHidden.focus()
     console.log("Keydown: ", e);
     if (btn.disabled === true) {
         e.preventDefault
