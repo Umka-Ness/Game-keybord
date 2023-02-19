@@ -1,24 +1,23 @@
 body {
-    background-image: url("/img/1643005908_15-phonoteka-org-p-fon-les-multyashnii-15.png");
+    background-image: url("/img/min480px.png");
     background-repeat: no-repeat;
     background-size: cover;
     overflow-y: hidden;
 
     @media screen and (max-width:580px) {
-        background-image: url("/img/min\ 480px\ —\ копия.png");
+        background-image: url("/img/min480px.png");
         background-size: 100vw;
         
     }
 
     @media screen and (min-width:581px) {
-        background-image: url("/img/min\ 480px\ —\ копия.png");
+        background-image: url("/img/min480px.png");
         background-size: 100vw;
     }
     @media screen and (min-width:860px) {
-        background-image: url("/img/min\ 480px\ —\ копия.png");
+        background-image: url("/img/min480px.png");
         background-size: 100vw;
     }
-
 }
 
 .hero-poz {
@@ -28,31 +27,30 @@ body {
 .lastText {
     display: flex;
     color: black;
-    font-size: 20px;
+    font-size: 30px;
     border: 2px solid #000000;
     border-radius: 20px;
-    max-height: 50px;
+    height: 50px;
     width: 88%;
     padding: 20px;
     margin-top: 300px;
     margin-left: 8%;
     margin-right: 92%;
     overflow-y: hidden;
-    box-shadow: inset 0 0 2000px rgba(4, 193, 14, 0.245);
+    box-shadow: inset 0 0 2000px rgb(255, 255, 255);
 
     @media screen and (max-width: 580px) {
-            padding: 10px;
-            font-size: 10px;
-            width: 84%;
-        }
+        padding: 10px;
+        font-size: 10px;
+        width: 84%;
+    }
     
-        @media screen and (min-width:581px) {
-            width: 86%;
-        }
+    @media screen and (min-width:581px) {
+        width: 86%;
+    }
     
-        @media screen and (min-width:1200px) {
-        }
-
+    @media screen and (min-width:1200px) {
+    }
 }
 
 .firstText {
