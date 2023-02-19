@@ -29,7 +29,8 @@ inputHidden.addEventListener("keydown", e => {
 
 function indexPlusMob(key) {
     inputHidden.value = devList
-    if (key === textList[index]) {
+    if (inputHidden.textContent[0] === textList[index] || key === textList[index]) {
+        console.log(index)
 
         devList = devList.slice(1)
         inputHidden.value = devList
