@@ -55,10 +55,25 @@ body {
   border-radius: 15px;
   font-size: 20px;
   color: #000000;
-  width: 400px;
+  width: 100px;
   margin-left: 50%;
   margin-right: 50%;
   margin-top: 10px;
+}
+@media screen and (max-width: 580px) {
+  .timer {
+    width: 100px;
+  }
+}
+@media screen and (min-width: 581px) {
+  .timer {
+    width: 100px;
+  }
+}
+@media screen and (min-width: 860px) {
+  .timer {
+    width: 100px;
+  }
 }
 
 .slide-top {
