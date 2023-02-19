@@ -21,12 +21,17 @@ document.body.addEventListener("keydown", e => {
 
 // Only Timer
 btn.addEventListener("click", event => {
-    let time = 0
+    let sec = 57
+    let min = 0
     inputText.value = devList
     btn.disabled = true
     const checTime = setInterval(() => {
-        time += 1
-        timer.textContent = time + " sec"
+        sec += 1
+        timer.textContent = min + "m " + sec + " sec"
+        if (sec === 60) {
+            min += 1
+            sec = 0
+        }
         
     }, 1000)
     const checkList = setInterval(() => {
