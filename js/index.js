@@ -22,10 +22,21 @@ inputHidden.addEventListener("keydown", e => {
     console.log("Keydown: ", e);
     if (btn.disabled === true) {
         e.preventDefault
-        indexPlus(e.key)
-        checText(e.key)
+        indexPlusMob(e.key)
     }
 })
+
+function indexPlusMob(key) {
+    inputHidden.value = devList
+    if (key === textList[index]) {
+
+        devList = devList.slice(1)
+        inputHidden.value = devList
+
+        return
+    }
+    
+}
 
 
 // Only Timer
