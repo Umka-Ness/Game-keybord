@@ -1,5 +1,6 @@
 const btn = document.querySelector(".btn-go")
 const inputText = document.querySelector(".lastText")
+const inputHidden = document.querySelector(".input-absolute")
 
 const timer = document.querySelector(".timer")
 
@@ -9,7 +10,7 @@ let devList = "Набери небольшой текст. Проверь, ск�
 let index = 0
 
 document.body.addEventListener("keydown", e => {
-    inputText.style.focus = "true"
+    inputHidden.style.focus = "true"
     console.log("Keydown: ", e);
     if (btn.disabled === true) {
         e.preventDefault

@@ -4,6 +4,11 @@ body {
   overflow-y: hidden;
 }
 
+.input-absolute {
+  position: absolute;
+  opacity: 0;
+}
+
 .hero-poz {
   position: relative;
 }
