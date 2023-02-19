@@ -21,7 +21,7 @@ document.body.addEventListener("keydown", e => {
 
 // Only Timer
 btn.addEventListener("click", event => {
-    let sec = 57
+    let sec = 0
     let min = 0
     inputText.value = devList
     btn.disabled = true
