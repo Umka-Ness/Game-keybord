@@ -1,24 +1,24 @@
 body {
-  background-image: url("/img/min480px.png");
+  background-image: url("/img/minpx.png");
   background-repeat: no-repeat;
   background-size: cover;
   overflow-y: hidden;
 }
 @media screen and (max-width: 580px) {
   body {
-    background-image: url("/img/min480px.png");
+    background-image: url("/img/minpx.png");
     background-size: 100vw;
   }
 }
 @media screen and (min-width: 581px) {
   body {
-    background-image: url("/img/min480px.png");
+    background-image: url("/img/minpx.png");
     background-size: 100vw;
   }
 }
 @media screen and (min-width: 860px) {
   body {
-    background-image: url("/img/min480px.png");
+    background-image: url("/img/minpx.png");
     background-size: 100vw;
   }
 }
