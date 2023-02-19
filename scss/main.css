@@ -1,8 +1,15 @@
+@charset "UTF-8";
 body {
   background-image: url("/img/1643005908_15-phonoteka-org-p-fon-les-multyashnii-15.png");
   background-repeat: no-repeat;
   background-size: cover;
   overflow-y: hidden;
+}
+@media screen and (max-width: 580px) {
+  body {
+    background-image: url("/img/min 480px — копия.png");
+    background-size: 100vw;
+  }
 }
 
 .hero-poz {
@@ -19,21 +26,35 @@ body {
   width: 88%;
   padding: 20px;
   margin-top: 200px;
-  margin-left: 90px;
+  margin-left: 8%;
+  margin-right: 92%;
   overflow-y: hidden;
-  box-shadow: inset 0 0 2000px rgba(7, 236, 19, 0.832);
+  box-shadow: inset 0 0 2000px rgba(4, 193, 14, 0.245);
 }
-
+@media screen and (max-width: 580px) {
+  .lastText {
+    padding: 10px;
+    font-size: 10px;
+  }
+}
 .firstText {
   font-size: 20px;
   margin-top: 80px;
-  margin-left: 370px;
+  width: 88%;
+  margin-left: 25%;
+  margin-right: 75%;
   max-width: 50%;
   border: 2px solid #000000;
   border-radius: 20px;
   padding: 20px;
   overflow-y: hidden;
-  box-shadow: inset 0 0 2000px rgba(7, 236, 19, 0.832);
+  box-shadow: inset 0 0 2000px rgba(4, 193, 14, 0.245);
+}
+@media screen and (max-width: 680px) {
+  .firstText {
+    padding: 10px;
+    font-size: 10px;
+  }
 }
 
 .container {
@@ -51,13 +72,15 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 3px solid #12c64b;
-  box-shadow: inset 0 0 2000px rgba(7, 236, 19, 0.407);
+  border: 2px solid rgba(0, 0, 0, 0.6117647059);
+  box-shadow: inset 0 0 2000px rgba(4, 193, 14, 0.245);
   border-radius: 15px;
   font-size: 20px;
-  color: #ffae00;
+  color: #000000;
   width: 50px;
-  margin-left: 650px;
+  margin-left: 50%;
+  margin-right: 50%;
+  margin-top: 10px;
 }
 
 .slide-top {
@@ -69,23 +92,36 @@ body {
   z-index: 1;
   animation: slide-top 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
-
-@keyframes slide-top {
-  0% {
-    transform: translateY(-30px);
+@media screen and (max-width: 580px) {
+  .slide-top {
+    top: 150%;
+    animation: slide-top 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   }
-  20% {
-    transform: translateX(-20px);
-  }
-  100% {
-    transform: translateY(150px) translateX(10px);
+  @keyframes slide-top {
+    0% {
+      transform: translateY(-300px);
+    }
+    20% {
+      transform: translateX(-20px);
+    }
+    100% {
+      transform: translateY(130px) translateX(-35px);
+    }
   }
 }
+
 .box {
   position: absolute;
   width: 250px;
   height: 250px;
   z-index: 50;
+}
+@media screen and (max-width: 580px) {
+  .box {
+    width: 150px;
+    height: 150px;
+    margin-top: 30%;
+  }
 }
 
 .coins {
@@ -102,11 +138,27 @@ body {
   padding: 10px;
   box-shadow: inset 0 0 20px rgba(236, 137, 7, 0.832);
 }
+@media screen and (max-width: 580px) {
+  .coins {
+    margin-top: 80%;
+    margin-left: 32%;
+    font-size: 20px;
+  }
+}
 
 .btn-go {
   position: absolute;
-  margin-left: 90%;
+  margin-left: 89%;
+  margin-right: 11%;
   margin-top: 8%;
   padding: 20px 40px 20px 40px;
   border-radius: 15px;
+}
+@media screen and (max-width: 580px) {
+  .btn-go {
+    padding: 10px 20px 10px 20px;
+    margin-left: 80%;
+    margin-right: 20%;
+    margin-top: 56%;
+  }
 }/*# sourceMappingURL=main.css.map */
