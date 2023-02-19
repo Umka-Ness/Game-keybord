@@ -23,6 +23,7 @@ inputHidden.addEventListener("keydown", e => {
     if (btn.disabled === true) {
         e.preventDefault
         indexPlusMob(e.key)
+        checText(e.key)
     }
 })
 
