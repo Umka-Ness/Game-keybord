@@ -18,6 +18,15 @@ document.body.addEventListener("keydown", e => {
     }
 })
 
+inputHidden.addEventListener("keydown", e => {
+    console.log("Keydown: ", e);
+    if (btn.disabled === true) {
+        e.preventDefault
+        indexPlus(e.key)
+        checText(e.key)
+    }
+})
+
 
 // Only Timer
 btn.addEventListener("click", event => {
@@ -62,7 +71,6 @@ function indexPlus(key) {
 function checText(key) {
     if (textList[0] === key) {
         textList = textList.slice(1)
-
         return
     }
 }
