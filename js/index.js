@@ -1,13 +1,13 @@
 const btn = document.querySelector(".btn-go")
 const inputText = document.querySelector(".lastText")
-const inputHidden = document.querySelector(".input-absolute")
 
 const timer = document.querySelector(".timer")
 
 
-let textList = "Набери небольшой текст. Проверь, сколько знаков в минуту ты печатаешь на русском, украинском или английском языке, и порази друзей или работодателей сертификатом скорости печати"
-let devList = "Набери небольшой текст. Проверь, сколько знаков в минуту ты печатаешь на русском, украинском или английском языке, и порази друзей или работодателей сертификатом скорости печати"
+let textList = "Набери"
+let devList = "Набери"
 let index = 0
+let error = 0
 
 document.body.addEventListener("keydown", e => {
     console.log("Keydown: ", e);
@@ -18,32 +18,8 @@ document.body.addEventListener("keydown", e => {
     }
 })
 
-inputHidden.addEventListener("keydown", e => {
-    console.log("Keydown: ", e);
-    if (btn.disabled === true) {
-        e.preventDefault
-        indexPlusMob(e.key)
-        checText(e.key)
-    }
-})
-
-function indexPlusMob(key) {
-    inputHidden.value = devList
-    if (inputHidden.textContent[0] === textList[index] || key === textList[index]) {
-        console.log(index)
-
-        devList = devList.slice(1)
-        inputHidden.value = devList
-
-        return
-    }
-    
-}
-
-
 // Only Timer
 btn.addEventListener("click", event => {
-    inputHidden.focus()
     let sec = 0
     let min = 0
     inputText.value = devList
@@ -59,7 +35,7 @@ btn.addEventListener("click", event => {
     }, 1000)
     const checkList = setInterval(() => {
         if (textList.length === 0) {
-            console.log("list === 0")
+            console.log("error: " + error)
             clearInterval(checkList)
             clearInterval(checTime)
             return
@@ -71,12 +47,19 @@ btn.addEventListener("click", event => {
 // replace color in Input
 function indexPlus(key) {
     inputText.value = devList
-    if (key === textList[index]) {
+    if (key === 'CapsLock' || key === "Shift" || key === "Alt" || key === "Control") {
+        return
+    }
+    else if (key === textList[index]) {
 
         devList = devList.slice(1)
         inputText.value = devList
 
         return
+    }
+    else {
+        error += 1
+        console.log(error)
     }
     
 }
@@ -84,6 +67,7 @@ function indexPlus(key) {
 function checText(key) {
     if (textList[0] === key) {
         textList = textList.slice(1)
+
         return
     }
 }
