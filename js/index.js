@@ -2,24 +2,34 @@ const btn = document.querySelector(".btn-go")
 const inputText = document.querySelector(".lastText")
 
 const timer = document.querySelector(".timer")
+const coins = document.querySelector(".coins")
 
 
-let textList = "Мистер и миссис Дурсль проживали в доме номер четыре по Тисовой улице и всегда с гордостью заявляли, что они, слава богу, абсолютно нормальные люди. Уж от кого-кого, а от них никак нельзя было ожидать, чтобы они попали в какую-нибудь странную или загадочную ситуацию. Мистер и миссис Дурсль весьма неодобрительно относились к любым странностям, загадкам и прочей ерунде"
-let devList = "Мистер и миссис Дурсль проживали в доме номер четыре по Тисовой улице и всегда с гордостью заявляли, что они, слава богу, абсолютно нормальные люди. Уж от кого-кого, а от них никак нельзя было ожидать, чтобы они попали в какую-нибудь странную или загадочную ситуацию. Мистер и миссис Дурсль весьма неодобрительно относились к любым странностям, загадкам и прочей ерунде"
+let textList = "Привет, меня зовут Дима, я сделал эту прогу Привет, меня зовут Дима, я сделал эту прогу"
+let devList = "Привет, меня зовут Дима, я сделал эту прогу Привет, меня зовут Дима, я сделал эту прогу"
 let index = 0
 let error = 0
+let speed = 0
+let oldSpeed = 0
+let countCoins = 0
+
 
 document.body.addEventListener("keydown", e => {
-    console.log("Keydown: ", e);
     if (btn.disabled === true) {
+        if (e.key === 'CapsLock' || e.key === "Shift" || e.key === "Alt" || e.key === "Control") {
+        return
+        }
+        else {
         e.preventDefault
         indexPlus(e.key)
         checText(e.key)
-    }
+        oldSpeed += 1
+    }}
 })
 
 // Only Timer
 btn.addEventListener("click", event => {
+    speedTest()
     let sec = 0
     let min = 0
     inputText.value = devList
@@ -61,6 +71,7 @@ function indexPlus(key) {
         error += 1
         console.log(error)
     }
+    return
     
 }
 
@@ -70,4 +81,34 @@ function checText(key) {
 
         return
     }
+}
+
+// Speed text
+function speedTest() {
+    const timeout = setInterval(() => {
+        if (oldSpeed === 0) {
+            console.log("speed 0")
+            return
+        }
+        else if (oldSpeed <= 4) {
+            oldSpeed = 0
+            console.log("speed -1")
+            console.log(speed)
+            
+        }
+        
+        else if (oldSpeed === -1) {
+            oldSpeed = 0
+        }
+        else {
+            oldSpeed = 0
+            speed += 1
+            console.log("speed +1")
+            console.log(speed)
+        }
+        
+        coins.textContent = speed
+        console.log("lalala")
+    }, 1000)
+    
 }
