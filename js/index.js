@@ -16,10 +16,11 @@ let countCoins = 0
 
 document.body.addEventListener("keydown", e => {
     if (btn.disabled === true) {
-        if (e.key === 'CapsLock' || e.key === "Shift" || e.key === "Alt" || e.key === "Control") {
+        if (e.key === 'CapsLock' || e.key === "Shift" || e.key === "Alt" || e.key === "Control" || e.key != textList[0]) {
         return
         }
         else {
+        console.log(textList[0])
         e.preventDefault
         indexPlus(e.key)
         checText(e.key)
