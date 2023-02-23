@@ -107,7 +107,7 @@ function speedTest() {
             console.log("speed 0")
             return
         }
-        else if (oldSpeed <= 1) {
+        else if (oldSpeed <= 2) {
             oldSpeed = 0
             
         }
@@ -121,7 +121,7 @@ function speedTest() {
             coins.textContent = speed
             addCoin()
         }
-    }, 1000)
+    }, 500)
     
 }
 
