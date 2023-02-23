@@ -3,6 +3,7 @@ const inputText = document.querySelector(".lastText")
 
 const timer = document.querySelector(".timer")
 const coins = document.querySelector(".coins")
+const coin = document.querySelector(".slide-top")
 
 
 let textList = "Привет, меня зовут Дима, я сделал эту прогу Привет, меня зовут Дима, я сделал эту прогу"
@@ -109,7 +110,20 @@ function speedTest() {
         }
         
         coins.textContent = speed
-        console.log("lalala")
+        coin.classList.remove("slide-top")
+        coin.classList.add("slide-top-null")
+        coin.style.height = 50 + "px"
+        coin.style.position = "absolute"
+        coin.style.top = 180 + "px"
+        coin.style.left = 80 + "px"
+        coin.src = "img\null.png"
+        setTimeout(() => {
+            coin.src = "img/5a364041411e44.8325067215135048332667.png"
+            coin.classList.remove("slide-top-null")
+            coin.classList.add("slide-top")
+        },100)
+        
+        
     }, 1000)
     
 }

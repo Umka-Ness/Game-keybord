@@ -109,6 +109,14 @@ body {
         width: 100px;
     }
 }
+.slide-top-null {
+    position: absolute;
+        width: 50px;
+        height: 50px;
+        bottom: 78px;
+        left: 80px;
+        z-index: 1;
+}
 
 .slide-top {
     position: absolute;
