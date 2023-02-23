@@ -77,9 +77,17 @@ function pushError(key) {
             return
         }
     else {
-            error += 1;
-            console.log(error);
+        if (speed === 0) {
             return
+        }
+        else {
+            error += 1;
+            speed -= 1
+            console.log(error);
+            coins.textContent = speed
+            return
+        }
+        
         }
 }
 //Проверка совпадает написанная буква с ткстом или нет
