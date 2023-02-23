@@ -78,6 +78,7 @@ function pushError(key) {
         }
     else {
         if (speed === 0) {
+            error += 1;
             return
         }
         else {
