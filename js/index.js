@@ -8,7 +8,6 @@ const coin = document.querySelector(".slide-top")
 
 let textList = "Привет, меня зовут Дима, я сделал эту прогу Привет, меня зовут Дима, я сделал эту прогу"
 let devList = "Привет, меня зовут Дима, я сделал эту прогу Привет, меня зовут Дима, я сделал эту прогу"
-let index = 0
 let error = 0
 let speed = 0
 let oldSpeed = 0
@@ -17,16 +16,19 @@ let countCoins = 0
 
 document.body.addEventListener("keydown", e => {
     if (btn.disabled === true) {
+        pushError(e.key)
+        
         if (e.key === 'CapsLock' || e.key === "Shift" || e.key === "Alt" || e.key === "Control" || e.key != textList[0]) {
-        return
+            return
         }
         else {
-        console.log(textList[0])
-        e.preventDefault
-        indexPlus(e.key)
-        checText(e.key)
-        oldSpeed += 1
-    }}
+            e.preventDefault
+            indexPlus(e.key)
+            checText(e.key)
+            oldSpeed += 1
+        }
+        
+    }
 })
 
 // Only Timer
@@ -56,27 +58,31 @@ btn.addEventListener("click", event => {
     },250)
 })
 
-// replace color in Input
+// delete old text
 function indexPlus(key) {
     inputText.value = devList
-    if (key === 'CapsLock' || key === "Shift" || key === "Alt" || key === "Control") {
-        return
-    }
-    else if (key === textList[index]) {
+
+    if (key === textList[0]) {
 
         devList = devList.slice(1)
         inputText.value = devList
 
         return
     }
-    else {
-        error += 1
-        console.log(error)
-    }
-    return
-    
 }
 
+// Push errors
+function pushError(key) {
+    if (key === 'CapsLock' || key === "Shift" || key === "Alt" || key === "Control" || key === textList[0]) {
+            return
+        }
+    else {
+            error += 1;
+            console.log(error);
+            return
+        }
+}
+//Проверка совпадает написанная буква с ткстом или нет
 function checText(key) {
     if (textList[0] === key) {
         textList = textList.slice(1)
@@ -94,8 +100,6 @@ function speedTest() {
         }
         else if (oldSpeed <= 4) {
             oldSpeed = 0
-            console.log("speed -1")
-            console.log(speed)
             
         }
         
@@ -105,25 +109,25 @@ function speedTest() {
         else {
             oldSpeed = 0
             speed += 1
-            console.log("speed +1")
-            console.log(speed)
+            coins.textContent = speed
+            addCoin()
         }
-        
-        coins.textContent = speed
-        coin.classList.remove("slide-top")
+    }, 1000)
+    
+}
+
+// add animation coin
+function addCoin() {
+    coin.classList.remove("slide-top")
         coin.classList.add("slide-top-null")
         coin.style.height = 50 + "px"
         coin.style.position = "absolute"
         coin.style.top = 180 + "px"
         coin.style.left = 80 + "px"
-        coin.src = "img\null.png"
+        coin.src = "img/null.png"
         setTimeout(() => {
-            coin.src = "img/5a364041411e44.8325067215135048332667.png"
-            coin.classList.remove("slide-top-null")
-            coin.classList.add("slide-top")
-        },100)
-        
-        
-    }, 1000)
-    
+          coin.src = "img/5a364041411e44.8325067215135048332667.png";
+          coin.classList.remove("slide-top-null");
+          coin.classList.add("slide-top");
+        },0);
 }
