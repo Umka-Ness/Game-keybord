@@ -107,7 +107,7 @@ function speedTest() {
             console.log("speed 0")
             return
         }
-        else if (oldSpeed <= 4) {
+        else if (oldSpeed <= 1) {
             oldSpeed = 0
             
         }
