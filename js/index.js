@@ -4,16 +4,15 @@ const inputText = document.querySelector(".lastText")
 const timer = document.querySelector(".timer")
 const coins = document.querySelector(".coins")
 const coin = document.querySelector(".slide-top")
-
+const KEY = "coins"
 
 let textList = "Привет, меня зовут Дима, я сделал эту прогу Привет, меня зовут Дима, я сделал эту прогу"
 let devList = "Привет, меня зовут Дима, я сделал эту прогу Привет, меня зовут Дима, я сделал эту прогу"
 let error = 0
 let speed = 0
 let oldSpeed = 0
-let countCoins = 0
 
-
+checlLocalStorage()
 document.body.addEventListener("keydown", e => {
     if (btn.disabled === true) {
         pushError(e.key)
@@ -31,6 +30,15 @@ document.body.addEventListener("keydown", e => {
     }
 })
 
+function checlLocalStorage() {
+    if (localStorage.getItem(KEY)) {
+        coins.textContent = localStorage.getItem(KEY)
+    }
+    else {
+        console.log("No")
+    }
+}
+
 // Only Timer
 btn.addEventListener("click", event => {
     speedTest()
@@ -47,11 +55,13 @@ btn.addEventListener("click", event => {
         }
         
     }, 1000)
+    //End Game Function
     const checkList = setInterval(() => {
         if (textList.length === 0) {
             console.log("error: " + error)
             clearInterval(checkList)
             clearInterval(checTime)
+            localStorage.setItem(KEY,coins.textContent)
             return
         }
 
@@ -116,10 +126,19 @@ function speedTest() {
             oldSpeed = 0
         }
         else {
-            oldSpeed = 0
-            speed += 1
-            coins.textContent = speed
-            addCoin()
+            if (localStorage.getItem(KEY)) {
+                oldSpeed = 0
+                const localCoins = JSON.parse(KEY)
+                console.log(localCoins)
+                addCoin()
+            }
+            else {
+                oldSpeed = 0
+                speed += 1
+                coins.textContent = speed
+                addCoin()
+            }
+            
         }
     }, 500)
     
