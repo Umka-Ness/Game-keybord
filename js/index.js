@@ -33,6 +33,7 @@ document.body.addEventListener("keydown", e => {
 function checlLocalStorage() {
     if (localStorage.getItem(KEY)) {
         coins.textContent = localStorage.getItem(KEY)
+        speed = JSON.parse(localStorage.getItem(KEY))
     }
     else {
         console.log("No")
@@ -115,6 +116,9 @@ function speedTest() {
     const timeout = setInterval(() => {
         if (oldSpeed === 0) {
             console.log("speed 0")
+            if (localStorage.getItem(KEY) != coins.textContent) {
+                localStorage.setItem(KEY,speed)
+            }
             return
         }
         else if (oldSpeed <= 2) {
@@ -126,18 +130,12 @@ function speedTest() {
             oldSpeed = 0
         }
         else {
-            if (localStorage.getItem(KEY)) {
-                oldSpeed = 0
-                const localCoins = JSON.parse(KEY)
-                console.log(localCoins)
-                addCoin()
-            }
-            else {
-                oldSpeed = 0
-                speed += 1
-                coins.textContent = speed
-                addCoin()
-            }
+
+            oldSpeed = 0
+            speed += 1
+            coins.textContent = speed
+            console.log()
+            addCoin()
             
         }
     }, 500)
