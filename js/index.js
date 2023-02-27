@@ -6,8 +6,9 @@ const coins = document.querySelector(".coins")
 const coin = document.querySelector(".slide-top")
 const KEY = "coins"
 
-let textList = "Привет, меня зовут Дима, я сделал эту прогу Привет, меня зовут Дима, я сделал эту прогу"
-let devList = "Привет, меня зовут Дима, я сделал эту прогу Привет, меня зовут Дима, я сделал эту прогу"
+let testList = "Привет, меня зовут Дима, я сделал эту прогу"
+let textList = "Привет, меня зовут Дима, я сделал эту прогу"
+let devList = "Привет, меня зовут Дима, я сделал эту прогу"
 let error = 0
 let speed = 0
 let oldSpeed = 0
@@ -62,7 +63,23 @@ btn.addEventListener("click", event => {
             console.log("error: " + error)
             clearInterval(checkList)
             clearInterval(checTime)
-            localStorage.setItem(KEY,coins.textContent)
+            localStorage.setItem(KEY, coins.textContent)
+
+            if (sec >= (testList.length / 3)) {
+                alert("Ну почти")
+                console.log(testList.length / 3)
+            }
+            // меньше чем 12 и больше чем 10
+            else if (sec <= (testList.length / 3.5) && sec >= (testList.length / 4)) {
+                alert("Grate")
+            }
+            //
+            else if (sec < (testList.length / 4)){
+                alert("Max lvl")
+            }
+            else {
+                alert("Не ростраюйся, щас отодхни, а в 5 часов начнем по новой")
+            }
             return
         }
 
@@ -157,3 +174,4 @@ function addCoin() {
           coin.classList.add("slide-top");
         },0);
 }
+console.log(textList.length)
