@@ -145,6 +145,23 @@ body {
     }
   }
 }
+@media screen and (min-width: 1800px) {
+  .slide-top {
+    top: 150%;
+    animation: slide-top 2.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+  @keyframes slide-top {
+    0% {
+      transform: translateY(-100px);
+    }
+    20% {
+      transform: translateX(-10px);
+    }
+    100% {
+      transform: translateY(120px) translateX(-10px);
+    }
+  }
+}
 
 .box {
   position: absolute;
@@ -182,7 +199,7 @@ body {
 .coins {
   position: absolute;
   /* top: 130px;
-  left: 90px; */
+    left: 90px; */
   margin-top: 50%;
   margin-left: 35%;
   z-index: 51;
@@ -215,11 +232,128 @@ body {
   }
 }
 
+.input-text {
+  position: absolute;
+  margin-left: 78%;
+  margin-top: 15%;
+  border-radius: 50px;
+  text-align: center;
+  min-height: 30px;
+  background: rgba(255, 255, 255, 0.192);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  border: 1px solid rgba(43, 43, 43, 0.568);
+}
+@media screen and (max-width: 580px) {
+  .input-text {
+    position: absolute;
+    padding: 10px 20px 10px 20px;
+    margin-left: 73.5%;
+    margin-right: 30%;
+    margin-top: 12%;
+    max-width: 50px;
+    max-height: 10px;
+    font-size: 10px;
+  }
+}
+@media screen and (min-width: 581px) {
+  .input-text {
+    max-width: 111px;
+    margin-left: 80%;
+    margin-top: 17%;
+  }
+}
+@media screen and (min-width: 860px) {
+  .input-text {
+    margin-left: 80%;
+    margin-top: 13%;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .input-text {
+    margin-left: 80%;
+    margin-top: 10%;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .input-text {
+    margin-left: 80%;
+    margin-top: 8%;
+  }
+}
+@media screen and (min-width: 1700px) {
+  .input-text {
+    margin-left: 80%;
+    margin-top: 6.5%;
+    background: rgba(255, 255, 255, 0.292);
+  }
+}
+@media screen and (min-width: 1700px) {
+  .input-text {
+    margin-left: 80%;
+    margin-top: 5.5%;
+    background: rgba(255, 255, 255, 0.292);
+  }
+}
+@media screen and (max-height: 600px) {
+  .input-text {
+    margin-left: 80%;
+    margin-top: 10%;
+  }
+}
+
+.btn-reset {
+  position: absolute;
+  margin-left: 89%;
+  margin-right: 11%;
+  margin-top: 8%;
+  background: rgba(255, 255, 255, 0.192);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  border: 1px solid rgba(43, 43, 43, 0.568);
+  padding: 20px 40px 20px 40px;
+  border-radius: 15px;
+}
+@media screen and (max-width: 580px) {
+  .btn-reset {
+    position: absolute;
+    padding: 10px 20px 10px 20px;
+    margin-left: 75%;
+    margin-right: 30%;
+    margin-top: 1%;
+    max-width: 70px;
+    max-height: 35px;
+  }
+}
+@media screen and (min-width: 581px) {
+  .btn-reset {
+    max-width: 111px;
+    margin-left: 80%;
+    margin-top: 1%;
+  }
+}
+@media screen and (min-width: 860px) {
+  .btn-reset {
+    margin-left: 80%;
+    margin-top: 1%;
+  }
+}
+@media screen and (max-height: 600px) {
+  .btn-reset {
+    margin-left: 80%;
+    margin-top: 10%;
+  }
+}
+
 .btn-go {
   position: absolute;
   margin-left: 89%;
   margin-right: 11%;
   margin-top: 8%;
+  background: rgba(255, 255, 255, 0.192);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  border: 1px solid rgba(43, 43, 43, 0.568);
   padding: 20px 40px 20px 40px;
   border-radius: 15px;
 }
@@ -227,21 +361,47 @@ body {
   .btn-go {
     position: absolute;
     padding: 10px 20px 10px 20px;
-    margin-left: 70%;
+    margin-left: 75%;
     margin-right: 30%;
-    margin-top: 50%;
+    margin-top: 10%;
+    max-width: 70px;
+    max-height: 35px;
   }
 }
 @media screen and (min-width: 581px) {
   .btn-go {
     margin-left: 80%;
-    margin-top: 28%;
+    margin-top: 12%;
   }
 }
 @media screen and (min-width: 860px) {
   .btn-go {
     margin-left: 80%;
-    margin-top: 15%;
+    margin-top: 9%;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .btn-go {
+    margin-left: 80%;
+    margin-top: 7%;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .btn-go {
+    margin-left: 80%;
+    margin-top: 6%;
+  }
+}
+@media screen and (min-width: 1700px) {
+  .btn-go {
+    margin-left: 80%;
+    margin-top: 5%;
+  }
+}
+@media screen and (min-width: 2100px) {
+  .btn-go {
+    margin-left: 80%;
+    margin-top: 4%;
   }
 }
 @media screen and (max-height: 600px) {

@@ -1,44 +1,40 @@
 body {
-    
-    background-repeat: no-repeat;
-    background-size: cover;
-    overflow-y: hidden;
-
-
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-y: hidden;
 }
 
 .hero-poz {
-    position: relative;
+  position: relative;
 }
 
 .lastText {
-    display: flex;
-    color: black;
-    font-size: 30px;
-    border: 2px solid #000000;
-    border-radius: 20px;
-    height: 50px;
-    width: 88%;
-    padding: 20px;
-    margin-top: 300px;
-    margin-left: 8%;
-    margin-right: 92%;
-    overflow-y: hidden;
-    box-shadow: inset 0 0 2000px rgb(255, 255, 255);
+  display: flex;
+  color: black;
+  font-size: 30px;
+  border: 2px solid #000000;
+  border-radius: 20px;
+  height: 50px;
+  width: 88%;
+  padding: 20px;
+  margin-top: 300px;
+  margin-left: 8%;
+  margin-right: 92%;
+  overflow-y: hidden;
+  box-shadow: inset 0 0 2000px rgb(255, 255, 255);
 
-    @media screen and (max-width: 580px) {
-        padding: 10px;
-        font-size: 20px;
-        width: 84%;
-    }
-    
-    @media screen and (min-width:581px) {
-        width: 85%;
-    }
-    
-    @media screen and (min-width:860px) {
-        
-    }
+  @media screen and (max-width: 580px) {
+    padding: 10px;
+    font-size: 20px;
+    width: 84%;
+  }
+
+  @media screen and (min-width: 581px) {
+    width: 85%;
+  }
+
+  @media screen and (min-width: 860px) {
+  }
 }
 
 // .firstText {
@@ -56,13 +52,12 @@ body {
 //     overflow-y: hidden;
 //     opacity: 0;
 
-
 //     box-shadow: inset 0 0 2000px rgba(4, 193, 14, 0.245);
 
 //     @media screen and (max-width: 580px) {
 //             padding: 20px;
 //             font-size: 10px;
-    
+
 //         }
 //     @media screen and (min-width:581px) {
 //         margin-left: 30%;
@@ -71,217 +66,330 @@ body {
 // }
 
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column-reverse;
-    gap: 170px;
-    margin-top: 25%;
-    margin-left: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column-reverse;
+  gap: 170px;
+  margin-top: 25%;
+  margin-left: 25%;
 
-    width: 100%;
+  width: 100%;
 }
 
 .timer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid #0000009c;
-    box-shadow: inset 0 0 2000px rgba(4, 193, 14, 0.245);
-    border-radius: 15px;
-    font-size: 20px;
-    color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #0000009c;
+  box-shadow: inset 0 0 2000px rgba(4, 193, 14, 0.245);
+  border-radius: 15px;
+  font-size: 20px;
+  color: #000000;
+  width: 100px;
+
+  margin-left: 50%;
+  margin-right: 50%;
+  margin-top: 10px;
+
+  @media screen and (max-width: 580px) {
     width: 100px;
+  }
 
-    margin-left: 50%;
-    margin-right: 50%;
-    margin-top: 10px;
+  @media screen and (min-width: 581px) {
+    width: 100px;
+  }
 
-    @media screen and (max-width: 580px) {
-        width: 100px;
-    }
-    
-    @media screen and (min-width:581px) {
-        width: 100px;
-    }
-    
-    @media screen and (min-width:860px) {
-        width: 100px;
-    }
+  @media screen and (min-width: 860px) {
+    width: 100px;
+  }
 }
 .slide-top-null {
-    position: absolute;
-        width: 50px;
-        height: 50px;
-        bottom: 78px;
-        left: 80px;
-        z-index: 1;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  bottom: 78px;
+  left: 80px;
+  z-index: 1;
 }
 
 .slide-top {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    bottom: 78px;
-    left: 80px;
-    z-index: 1;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  bottom: 78px;
+  left: 80px;
+  z-index: 1;
 
-    animation: slide-top 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: slide-top 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 
-    @media screen and (max-width: 580px) {
-        top: 150%;
-        animation: slide-top 1.0s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  @media screen and (max-width: 580px) {
+    top: 150%;
+    animation: slide-top 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 
-        @keyframes slide-top {
-                0% {
-                    transform: translateY(-100px);
-                }
-        
-                20% {
-                    transform: translateX(-20px);
-                }
-        
-        
-                100% {
-                    transform: translateY(166px) translateX(-35px);
-                }
-        
-            }
-    
-        }
-        @media screen and (min-width: 581px) {
-        top: 150%;
-        animation: slide-top 2.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    @keyframes slide-top {
+      0% {
+        transform: translateY(-100px);
+      }
 
-        @keyframes slide-top {
-                0% {
-                    transform: translateY(-120px);
-                }
-        
-                20% {
-                    transform: translateX(-10px);
-                }
-        
-        
-                100% {
-                    transform: translateY(55px) translateX(-10px);
-                }
-        
-            }
-    
-        }
-    @media screen and (min-width: 860px) {
-        top: 150%;
-        animation: slide-top 2.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+      20% {
+        transform: translateX(-20px);
+      }
 
-        @keyframes slide-top {
-                0% {
-                    transform: translateY(-100px);
-                }
-        
-                20% {
-                    transform: translateX(-10px);
-                }
-        
-        
-                100% {
-                    transform: translateY(70px) translateX(-10px);
-                }
-        
-            }
-    
-        }
+      100% {
+        transform: translateY(166px) translateX(-35px);
+      }
+    }
+  }
+  @media screen and (min-width: 581px) {
+    top: 150%;
+    animation: slide-top 2.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+
+    @keyframes slide-top {
+      0% {
+        transform: translateY(-120px);
+      }
+
+      20% {
+        transform: translateX(-10px);
+      }
+
+      100% {
+        transform: translateY(55px) translateX(-10px);
+      }
+    }
+  }
+  @media screen and (min-width: 860px) {
+    top: 150%;
+    animation: slide-top 2.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+
+    @keyframes slide-top {
+      0% {
+        transform: translateY(-100px);
+      }
+
+      20% {
+        transform: translateX(-10px);
+      }
+
+      100% {
+        transform: translateY(70px) translateX(-10px);
+      }
+    }
+  }
+  @media screen and (min-width: 1800px) {
+    top: 150%;
+    animation: slide-top 2.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+
+    @keyframes slide-top {
+      0% {
+        transform: translateY(-100px);
+      }
+
+      20% {
+        transform: translateX(-10px);
+      }
+
+      100% {
+        transform: translateY(120px) translateX(-10px);
+      }
+    }
+  }
 }
 
-
 .box {
-    position: absolute;
-    width: 250px;
-    height: 250px;
-    z-index: 50;
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  z-index: 50;
 
-    @media screen and (max-width: 580px) {
-            width: 150px;
-            height: 150px;
-            margin-top: 30%;
-    
-        }
-    @media screen and (min-width:581px) {
-        width: 200px;
-        height: 200px;
-        margin-top: 13%;
-    }
-    @media screen and (min-width:860px) {
-            width: 200px;
-            height: 200px;
-            margin-top: 7%;
-        }
-    @media screen and (max-height:600px) {
-        margin-top: 1%;
-    }
+  @media screen and (max-width: 580px) {
+    width: 150px;
+    height: 150px;
+    margin-top: 30%;
+  }
+  @media screen and (min-width: 581px) {
+    width: 200px;
+    height: 200px;
+    margin-top: 13%;
+  }
+  @media screen and (min-width: 860px) {
+    width: 200px;
+    height: 200px;
+    margin-top: 7%;
+  }
+  @media screen and (max-height: 600px) {
+    margin-top: 1%;
+  }
 }
 
 .coins {
-    position: absolute;
-    /* top: 130px;
+  position: absolute;
+  /* top: 130px;
     left: 90px; */
-    margin-top: 50%;
-    margin-left: 35%;
-    z-index: 51;
+  margin-top: 50%;
+  margin-left: 35%;
+  z-index: 51;
+  font-size: 30px;
+  border: 2px solid #403b34a1;
+  background: #ecba05;
+  border-radius: 15px;
+  padding: 10px;
+
+  box-shadow: inset 0 0 20px rgba(236, 137, 7, 0.832);
+
+  @media screen and (max-width: 580px) {
+    margin-top: 80%;
+    margin-left: 32%;
+    font-size: 20px;
+  }
+  @media screen and (min-width: 581px) {
+    margin-top: 55%;
+    margin-left: 32%;
     font-size: 30px;
-    border: 2px solid #403b34a1;
-    background: #ecba05;
-    border-radius: 15px;
-    padding: 10px;
-
-    box-shadow: inset 0 0 20px rgba(236, 137, 7, 0.832);
-
-    @media screen and (max-width: 580px) {
-            margin-top: 80%;
-            margin-left: 32%;
-            font-size: 20px;
-    
-    }
-    @media screen and (min-width: 581px) {
-            margin-top: 55%;
-            margin-left: 32%;
-            font-size: 30px;
-    
-    }
-    @media screen and (min-width: 860px) {
-            margin-top: 55%;
-            margin-left: 32%;
-            font-size: 30px;
-    
-    }
-    
+  }
+  @media screen and (min-width: 860px) {
+    margin-top: 55%;
+    margin-left: 32%;
+    font-size: 30px;
+  }
 }
-
-.btn-go {
+.input-text {
+  position: absolute;
+  margin-left: 78%;
+  margin-top: 15%;
+  border-radius: 50px;
+  text-align: center;
+  min-height: 30px;
+  background: rgba(255, 255, 255, 0.192);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(43, 43, 43, 0.568);
+  @media screen and (max-width: 580px) {
     position: absolute;
-    margin-left: 89%;
-    margin-right: 11%;
-    margin-top: 8%;
+    padding: 10px 20px 10px 20px;
+    margin-left: 73.5%;
+    margin-right: 30%;
+    margin-top: 12%;
 
-    padding: 20px 40px 20px 40px;
-    border-radius: 15px;
-    @media screen and (max-width: 580px) {
-        position: absolute;
-        padding: 10px 20px 10px 20px;
-        margin-left: 70%;
-        margin-right: 30%;
-        margin-top: 50%;
-    }
-    @media screen and (min-width:581px) {
-        margin-left: 80%;
-        margin-top: 28%;
-    }
-    @media screen and (min-width:860px) {
-        margin-left: 80%;
-        margin-top: 15%;
-    }
-    @media screen and (max-height:600px) {
-        margin-left: 80%;
-        margin-top: 10%;
-    }
+    max-width: 50px;
+    max-height: 10px;
+    font-size: 10px;
+  }
+  @media screen and (min-width: 581px) {
+    max-width: 111px;
+    margin-left: 80%;
+    margin-top: 17%;
+  }
+  @media screen and (min-width: 860px) {
+    margin-left: 80%;
+    margin-top: 13%;
+  }
+  @media screen and (min-width: 1100px) {
+    margin-left: 80%;
+    margin-top: 10%;
+  }
+  @media screen and (min-width: 1400px) {
+    margin-left: 80%;
+    margin-top: 8%;
+  }
+  @media screen and (min-width: 1700px) {
+    margin-left: 80%;
+    margin-top: 6.5%;
+    background: rgba(255, 255, 255, 0.292);
+  }
+  @media screen and (min-width: 1700px) {
+    margin-left: 80%;
+    margin-top: 5.5%;
+    background: rgba(255, 255, 255, 0.292);
+  }
+  @media screen and (max-height: 600px) {
+    margin-left: 80%;
+    margin-top: 10%;
+  }
+}
+.btn-reset {
+  position: absolute;
+  margin-left: 89%;
+  margin-right: 11%;
+  margin-top: 8%;
+  background: rgba(255, 255, 255, 0.192);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(43, 43, 43, 0.568);
+
+  padding: 20px 40px 20px 40px;
+  border-radius: 15px;
+  @media screen and (max-width: 580px) {
+    position: absolute;
+    padding: 10px 20px 10px 20px;
+    margin-left: 75%;
+    margin-right: 30%;
+    margin-top: 1%;
+
+    max-width: 70px;
+    max-height: 35px;
+  }
+  @media screen and (min-width: 581px) {
+    max-width: 111px;
+    margin-left: 80%;
+    margin-top: 1%;
+  }
+  @media screen and (min-width: 860px) {
+    margin-left: 80%;
+    margin-top: 1%;
+  }
+
+  @media screen and (max-height: 600px) {
+    margin-left: 80%;
+    margin-top: 10%;
+  }
+}
+.btn-go {
+  position: absolute;
+  margin-left: 89%;
+  margin-right: 11%;
+  margin-top: 8%;
+  background: rgba(255, 255, 255, 0.192);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(43, 43, 43, 0.568);
+
+  padding: 20px 40px 20px 40px;
+  border-radius: 15px;
+  @media screen and (max-width: 580px) {
+    position: absolute;
+    padding: 10px 20px 10px 20px;
+    margin-left: 75%;
+    margin-right: 30%;
+    margin-top: 10%;
+
+    max-width: 70px;
+    max-height: 35px;
+  }
+  @media screen and (min-width: 581px) {
+    margin-left: 80%;
+    margin-top: 12%;
+  }
+  @media screen and (min-width: 860px) {
+    margin-left: 80%;
+    margin-top: 9%;
+  }
+  @media screen and (min-width: 1100px) {
+    margin-left: 80%;
+    margin-top: 7%;
+  }
+  @media screen and (min-width: 1400px) {
+    margin-left: 80%;
+    margin-top: 6%;
+  }
+  @media screen and (min-width: 1700px) {
+    margin-left: 80%;
+    margin-top: 5%;
+  }
+  @media screen and (min-width: 2100px) {
+    margin-left: 80%;
+    margin-top: 4%;
+  }
+  @media screen and (max-height: 600px) {
+    margin-left: 80%;
+    margin-top: 10%;
+  }
 }
