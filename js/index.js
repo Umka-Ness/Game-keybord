@@ -62,8 +62,6 @@ function checkInput() {
 }
 // Only Timer
 btn.addEventListener("click", (event) => {
-  console.log(textList);
-  console.log(devList);
   checkInput();
   speedTest();
   let sec = 0;
@@ -183,4 +181,4 @@ function addCoin() {
     coin.classList.add("slide-top");
   }, 0);
 }
-console.log(textList.length);
+console.log("length text: " + textList.length + " words");
