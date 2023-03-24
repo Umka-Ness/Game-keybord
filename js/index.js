@@ -1,3 +1,5 @@
+import closeModal from "./modal";
+
 const btn = document.querySelector(".btn-go");
 const inputText = document.querySelector(".lastText");
 const inputUserText = document.querySelector(".input-text");
@@ -17,7 +19,9 @@ let speed = 0;
 let oldSpeed = 0;
 
 checlLocalStorage();
+closeIco.addEventListener("click", closeModal);
 document.body.addEventListener("keydown", (e) => {
+  console.log(e);
   if (btn.disabled === true) {
     pushError(e.key);
 
@@ -118,6 +122,7 @@ function pushError(key) {
     key === "Shift" ||
     key === "Alt" ||
     key === "Control" ||
+    key === "AltGraph" ||
     key === textList[0]
   ) {
     return;
