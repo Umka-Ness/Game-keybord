@@ -1,4 +1,7 @@
-import closeModal from "./modal";
+import closeModal from "./modal.js";
+
+const backdrop = document.querySelector(".backdrop");
+const closeIco = document.querySelector(".modal-btn-ico");
 
 const btn = document.querySelector(".btn-go");
 const inputText = document.querySelector(".lastText");
@@ -19,7 +22,9 @@ let speed = 0;
 let oldSpeed = 0;
 
 checlLocalStorage();
-closeIco.addEventListener("click", closeModal);
+closeIco.addEventListener("click", (e) => {
+  backdrop.classList.add("is-hidden");
+});
 document.body.addEventListener("keydown", (e) => {
   console.log(e);
   if (btn.disabled === true) {
