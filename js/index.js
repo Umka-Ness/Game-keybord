@@ -28,9 +28,10 @@ let oldSpeed = 0;
 let allWords = 0;
 let wordsError = {
   data: "",
-  state: true,
+  comparativeData: "",
+  error: "",
 };
-let beforeWordsError = "";
+let beforeWordsError = [];
 
 checkLocalStorage();
 closeIco.addEventListener("click", (e) => {
@@ -111,7 +112,7 @@ btn.addEventListener("click", (event) => {
       lengthCount.textContent = allWords.length;
       recordList.textContent = error;
       timerCount.textContent = timer.textContent;
-
+      console.log(wordsError);
       if (sec >= textList.length / 3) {
         console.log(textList.length / 3);
       }
@@ -130,15 +131,33 @@ btn.addEventListener("click", (event) => {
 // delete old text
 function indexPlus(key) {
   inputText.value = devList;
-
   if (key === textList[0]) {
     wordsError.data += textList[0];
+
     devList = devList.slice(1);
     inputText.value = devList;
-    if (key === " ") {
+    if (key === " " || textList.length === 0) {
       console.log(wordsError.data);
+      console.log(wordsError.comparativeData);
+      console.log(wordsError);
+      wordsError.data = wordsError.data.trim();
+      findErrors();
+    } else {
+      wordsError.comparativeData += key;
     }
-    return;
+  }
+}
+
+function findErrors() {
+  if (wordsError.data === wordsError.comparativeData) {
+    wordsError.data = "";
+    wordsError.comparativeData = "";
+    console.log("clear 1");
+  } else {
+    wordsError.error += wordsError.comparativeData;
+    wordsError.data = "";
+    wordsError.comparativeData = "";
+    console.log("clear 2");
   }
 }
 
@@ -158,6 +177,8 @@ function pushError(key) {
     error += 1;
     speed -= 1;
     console.log(error);
+
+    wordsError.comparativeData += key;
 
     coins.textContent = speed;
 
