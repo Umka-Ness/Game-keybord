@@ -26,12 +26,13 @@ let error = 0;
 let speed = 0;
 let oldSpeed = 0;
 let allWords = 0;
+
 let wordsError = {
   data: "",
   comparativeData: "",
   error: "",
+  compare: "",
 };
-let beforeWordsError = [];
 
 checkLocalStorage();
 closeIco.addEventListener("click", (e) => {
@@ -39,7 +40,6 @@ closeIco.addEventListener("click", (e) => {
 });
 
 document.body.addEventListener("keydown", (e) => {
-  console.log(e);
   if (btn.disabled === true) {
     pushError(e.key);
 
@@ -104,7 +104,10 @@ btn.addEventListener("click", (event) => {
   //End Game Function
   const checkList = setInterval(() => {
     if (textList.length === 0) {
+      wordsError.data = wordsError.data.trim();
+      findErrors();
       console.log("error: " + error);
+
       clearInterval(checkList);
       clearInterval(checTime);
       localStorage.setItem(KEY, coins.textContent);
@@ -136,24 +139,29 @@ function indexPlus(key) {
 
     devList = devList.slice(1);
     inputText.value = devList;
+    // когда закончил писать слово и нажал пробел
     if (key === " " || textList.length === 0) {
       console.log(wordsError.data);
       console.log(wordsError.comparativeData);
       console.log(wordsError);
       wordsError.data = wordsError.data.trim();
+
       findErrors();
     } else {
       wordsError.comparativeData += key;
     }
   }
 }
-
+// Тут сравнивает правильное слово и не правильно и кидает по своим словарям
 function findErrors() {
   if (wordsError.data === wordsError.comparativeData) {
     wordsError.data = "";
     wordsError.comparativeData = "";
     console.log("clear 1");
   } else {
+    wordsError.compare += wordsError.data;
+    wordsError.compare += " ";
+    wordsError.error += " ";
     wordsError.error += wordsError.comparativeData;
     wordsError.data = "";
     wordsError.comparativeData = "";
