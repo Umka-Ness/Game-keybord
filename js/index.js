@@ -37,6 +37,7 @@ let wordsError = {
   compare: "",
 };
 
+zeroCoins();
 checkLocalStorage();
 closeIco.addEventListener("click", (e) => {
   backdrop.classList.add("is-hidden");
@@ -272,3 +273,15 @@ function addCoin() {
   }, 0);
 }
 console.log("length text: " + textList.length + " sumbols");
+
+function zeroCoins() {
+  setInterval(() => {
+    if (coins.textContent < 0) {
+      coins.textContent = 0;
+      localStorage.setItem(KEY, coins.textContent);
+      return;
+    } else {
+      return;
+    }
+  });
+}
