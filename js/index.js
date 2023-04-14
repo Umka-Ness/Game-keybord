@@ -1,5 +1,3 @@
-import closeModal from "./modal.js";
-
 const backdrop = document.querySelector(".backdrop");
 const closeIco = document.querySelector(".modal-btn-ico");
 
@@ -14,6 +12,11 @@ const coin = document.querySelector(".slide-top");
 
 const recordList = document.querySelector(".error");
 const timerCount = document.querySelector(".timerCount");
+
+const modalError = document.querySelector(".modal-error");
+const trueWords = document.querySelector(".true-words");
+const falseWords = document.querySelector(".false-words");
+const yourErrorBtn = document.querySelector(".your-error");
 
 const KEY = "coins";
 
@@ -37,6 +40,18 @@ let wordsError = {
 checkLocalStorage();
 closeIco.addEventListener("click", (e) => {
   backdrop.classList.add("is-hidden");
+});
+
+yourErrorBtn.addEventListener("click", (e) => {
+  console.log(12312);
+  modalError.classList.remove("is-hidden");
+});
+
+document.addEventListener("click", (e) => {
+  if (e.target === backdrop) {
+    console.log(e.target);
+    modalError.classList.add("is-hidden");
+  }
 });
 
 document.body.addEventListener("keydown", (e) => {
@@ -77,6 +92,7 @@ function checkLocalStorage() {
 }
 function checkInput() {
   if (inputUserText.value !== "") {
+    inputUserText.value = inputUserText.value.trim();
     devList = inputUserText.value;
     textList = inputUserText.value;
     allWords = inputUserText.value;
@@ -116,6 +132,8 @@ btn.addEventListener("click", (event) => {
       recordList.textContent = error;
       timerCount.textContent = timer.textContent;
       console.log(wordsError);
+
+      addErrorsInModalErrors();
       if (sec >= textList.length / 3) {
         console.log(textList.length / 3);
       }
@@ -131,6 +149,17 @@ btn.addEventListener("click", (event) => {
   }, 250);
 });
 
+function addErrorsInModalErrors() {
+  for (const i of wordsError.compare) {
+    trueWords.textContent += i;
+    console.log(wordsError.compare);
+  }
+
+  for (const i of wordsError.error) {
+    falseWords.textContent += i;
+  }
+}
+
 // delete old text
 function indexPlus(key) {
   inputText.value = devList;
@@ -139,7 +168,7 @@ function indexPlus(key) {
 
     devList = devList.slice(1);
     inputText.value = devList;
-    // когда закончил писать слово и нажал пробел
+    // когда закончил писать слово или нажал пробел
     if (key === " " || textList.length === 0) {
       console.log(wordsError.data);
       console.log(wordsError.comparativeData);
@@ -160,11 +189,12 @@ function findErrors() {
     console.log("clear 1");
   } else {
     wordsError.compare += wordsError.data;
-    wordsError.compare += " ";
-    wordsError.error += " ";
+    wordsError.compare += ", ";
+
     wordsError.error += wordsError.comparativeData;
     wordsError.data = "";
     wordsError.comparativeData = "";
+    wordsError.error += ", ";
     console.log("clear 2");
   }
 }
