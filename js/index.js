@@ -1,5 +1,7 @@
 const backdrop = document.querySelector(".backdrop");
 const closeIco = document.querySelector(".modal-btn-ico");
+const closeIcoError = document.querySelector(".modal-btn-ico__error");
+const useModal = document.querySelector(".useModal");
 
 const btn = document.querySelector(".btn-go");
 const inputText = document.querySelector(".lastText");
@@ -12,6 +14,7 @@ const coin = document.querySelector(".slide-top");
 
 const recordList = document.querySelector(".error");
 const timerCount = document.querySelector(".timerCount");
+const countProcentDone = document.querySelector(".count-done");
 
 const modalError = document.querySelector(".modal-error");
 const trueWords = document.querySelector(".true-words");
@@ -21,14 +24,16 @@ const yourErrorBtn = document.querySelector(".your-error");
 const KEY = "coins";
 
 const lengthCount = document.querySelector(".length-count");
-export let textList =
+let textList =
   "The Dursleys had everything they wanted, but they also had a secret, and their greatest fear was that somebody would discover it. They didn’t think they could bear it if anyone found out about the Potters. Mrs. Potter was Mrs. Dursley’s sister, but they hadn’t met for several years; in fact, Mrs. Dursley pretended she didn’t have a sister, because her sister and her good-for-nothing husband were as unDursleyish as it was possible to be. The Dursleys shuddered to think what the neighbors would say if the Potters arrived in the street. The Dursleys knew that the Potters had a small son, too, but they had never even seen him. This boy was another good reason for keeping the Potters away; they didn’t want Dudley mixing with a child like that.";
-export let devList =
+let devList =
   "The Dursleys had everything they wanted, but they also had a secret, and their greatest fear was that somebody would discover it. They didn’t think they could bear it if anyone found out about the Potters. Mrs. Potter was Mrs. Dursley’s sister, but they hadn’t met for several years; in fact, Mrs. Dursley pretended she didn’t have a sister, because her sister and her good-for-nothing husband were as unDursleyish as it was possible to be. The Dursleys shuddered to think what the neighbors would say if the Potters arrived in the street. The Dursleys knew that the Potters had a small son, too, but they had never even seen him. This boy was another good reason for keeping the Potters away; they didn’t want Dudley mixing with a child like that.";
 let error = 0;
 let speed = 0;
 let oldSpeed = 0;
 let allWords = 0;
+let countDone = "";
+let copyTextList = "";
 
 let wordsError = {
   data: "",
@@ -39,6 +44,7 @@ let wordsError = {
 
 zeroCoins();
 checkLocalStorage();
+
 closeIco.addEventListener("click", (e) => {
   backdrop.classList.add("is-hidden");
 });
@@ -49,7 +55,12 @@ yourErrorBtn.addEventListener("click", (e) => {
 });
 
 document.addEventListener("click", (e) => {
-  if (e.target === backdrop) {
+  console.log(e.target);
+  if (
+    e.target === closeIcoError ||
+    e.target === backdrop ||
+    e.target === useModal
+  ) {
     console.log(e.target);
     modalError.classList.add("is-hidden");
   }
@@ -99,6 +110,7 @@ function checkInput() {
     allWords = inputUserText.value;
     inputText.value = inputUserText.value;
     inputUserText.value = "";
+    copyTextList = textList.length;
   }
   return;
 }
@@ -133,6 +145,7 @@ btn.addEventListener("click", (event) => {
       recordList.textContent = error;
       timerCount.textContent = timer.textContent;
       console.log(wordsError);
+      counterDoneWords();
 
       addErrorsInModalErrors();
       if (sec >= textList.length / 3) {
@@ -284,4 +297,10 @@ function zeroCoins() {
       return;
     }
   });
+}
+
+function counterDoneWords() {
+  countDone = (copyTextList * copyTextList) / error;
+  countProcentDone.textContent = countDone + " %";
+  console.log(countDone);
 }
