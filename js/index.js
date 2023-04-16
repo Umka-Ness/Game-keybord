@@ -293,7 +293,7 @@ function zeroCoins() {
 }
 
 function counterDoneWords() {
-  countDone = (copyTextList * copyTextList) / error;
+  countDone = Math.round(((copyTextList - error) * 100) / copyTextList);
   countProcentDone.textContent = countDone + " %";
   console.log(countDone);
 }

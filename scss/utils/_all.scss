@@ -240,7 +240,7 @@ body {
   border-radius: 15px;
   padding: 10px;
 
-  box-shadow: inset 0 0 20px rgba(236, 137, 7, 0.832);
+  box-shadow: inset 0 0 20px rgba(221, 127, 3, 0.496);
 
   @media screen and (max-width: 580px) {
     margin-top: 80%;
@@ -248,13 +248,13 @@ body {
     font-size: 20px;
   }
   @media screen and (min-width: 581px) {
-    margin-top: 55%;
-    margin-left: 32%;
+    margin-top: 64%;
+    margin-left: 35%;
     font-size: 30px;
   }
   @media screen and (min-width: 860px) {
-    margin-top: 55%;
-    margin-left: 32%;
+    margin-top: 60%;
+    margin-left: 35%;
     font-size: 30px;
   }
 }
