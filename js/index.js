@@ -55,13 +55,11 @@ yourErrorBtn.addEventListener("click", (e) => {
 });
 
 document.addEventListener("click", (e) => {
-  console.log(e.target);
   if (
     e.target === closeIcoError ||
     e.target === backdrop ||
     e.target === useModal
   ) {
-    console.log(e.target);
     modalError.classList.add("is-hidden");
   }
 });
@@ -184,9 +182,6 @@ function indexPlus(key) {
     inputText.value = devList;
     // когда закончил писать слово или нажал пробел
     if (key === " " || textList.length === 0) {
-      console.log(wordsError.data);
-      console.log(wordsError.comparativeData);
-      console.log(wordsError);
       wordsError.data = wordsError.data.trim();
 
       findErrors();
@@ -200,7 +195,6 @@ function findErrors() {
   if (wordsError.data === wordsError.comparativeData) {
     wordsError.data = "";
     wordsError.comparativeData = "";
-    console.log("clear 1");
   } else {
     wordsError.compare += wordsError.data;
     wordsError.compare += ", ";
@@ -209,7 +203,6 @@ function findErrors() {
     wordsError.data = "";
     wordsError.comparativeData = "";
     wordsError.error += ", ";
-    console.log("clear 2");
   }
 }
 
