@@ -1,0 +1,25 @@
+{
+  "name": "game-keybord",
+  "version": "1.0.0",
+  "description": "",
+  "private": "true",
+  "source": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "devDependencies": {
+    "parcel": "latest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Umka-Ness/Game-keybord.git"
+  },
+  "author": "Umka-Ness",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Umka-Ness/Game-keybord/issues"
+  },
+  "homepage": "https://github.com/Umka-Ness/Game-keybord#readme"
+}
