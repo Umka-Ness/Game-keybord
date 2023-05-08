@@ -144,7 +144,6 @@ btn.addEventListener("click", (event) => {
       timerCount.textContent = timer.textContent;
       console.log(wordsError);
       counterDoneWords();
-      grade();
 
       addErrorsInModalErrors();
       if (sec >= textList.length / 3) {
@@ -296,17 +295,5 @@ function zeroCoins() {
 function counterDoneWords() {
   countDone = Math.round(((copyTextList - error) * 100) / copyTextList);
   countProcentDone.textContent = countDone + " %";
-  console.log(countDone);
-}
-
-function grade() {
-  const progress = document.querySelector(".Progress");
-  if (countDone >= 95) {
-    progress.textContent = "Awesome";
-  } else if (countDone <= 94 && countDone >= 80) {
-    progress.textContent = " Super";
-  } else if (countDone <= 79 && countDone >= 60) {
-    progress.textContent = "Not bad";
-  }
   console.log(countDone);
 }
