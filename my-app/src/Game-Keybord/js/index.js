@@ -75,11 +75,11 @@ document.body.addEventListener("keydown", (e) => {
       e.key === "Control" ||
       e.key === "AltGraph" ||
       e.key === "Tab" ||
-      e.key != textList[0]
+      e.key !== textList[0]
     ) {
       return;
     } else {
-      e.preventDefault;
+      // e.preventDefault;
       indexPlus(e.key);
       checText(e.key);
       oldSpeed += 1;
@@ -89,7 +89,7 @@ document.body.addEventListener("keydown", (e) => {
 
 btnReset.addEventListener("click", reload);
 function reload() {
-  location.reload();
+  window.location.reload();
 }
 
 function checkLocalStorage() {
@@ -245,7 +245,7 @@ function speedTest() {
   const timeout = setInterval(() => {
     if (oldSpeed === 0) {
       console.log(oldSpeed);
-      if (localStorage.getItem(KEY) != coins.textContent) {
+      if (localStorage.getItem(KEY) !== coins.textContent) {
         localStorage.setItem(KEY, speed);
       }
       return;
