@@ -295,7 +295,11 @@ function zeroCoins() {
 
 function counterDoneWords() {
   countDone = Math.round(((copyTextList - error) * 100) / copyTextList);
-  countProcentDone.textContent = countDone + " %";
+  if (countDone <= 0) {
+    countProcentDone.textContent = 0 + " %";
+  } else {
+    countProcentDone.textContent = countDone + " %";
+  }
   console.log(countDone);
 }
 
@@ -309,6 +313,10 @@ function grade() {
     progress.textContent = "Not bad";
   } else if (countDone <= 59 && countDone >= 30) {
     progress.textContent = "You need more training";
+  } else if (countDone <= 29 && countDone >= 0) {
+    progress.textContent = "Try again";
+  } else if (countDone < 0) {
+    progress.textContent = "Try again";
   }
   console.log(countDone);
 }
