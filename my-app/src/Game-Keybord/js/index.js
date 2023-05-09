@@ -307,6 +307,8 @@ function grade() {
     progress.textContent = " Super";
   } else if (countDone <= 79 && countDone >= 60) {
     progress.textContent = "Not bad";
+  } else if (countDone <= 59 && countDone >= 30) {
+    progress.textContent = "You need more training";
   }
   console.log(countDone);
 }
