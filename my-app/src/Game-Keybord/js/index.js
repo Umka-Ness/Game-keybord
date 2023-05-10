@@ -21,6 +21,9 @@ const trueWords = document.querySelector(".true-words");
 const falseWords = document.querySelector(".false-words");
 const yourErrorBtn = document.querySelector(".your-error");
 
+const game = document.querySelector(".game");
+game.style.display = "none";
+
 const KEY = "coins";
 
 const lengthCount = document.querySelector(".length-count");
@@ -41,6 +44,15 @@ let wordsError = {
   error: "",
   compare: "",
 };
+
+loaderModal();
+function loaderModal() {
+  const loader = document.querySelector(".load-modal");
+  setTimeout(() => {
+    loader.style.display = "none";
+    game.style.display = "inherit";
+  }, 5000);
+}
 
 zeroCoins();
 checkLocalStorage();
