@@ -70,11 +70,21 @@
 .true-words {
   min-width: 199px;
   max-width: 200px;
+  overflow-wrap: break-word; /* не поддерживает IE, Firefox; является копией word-wrap */
+  word-wrap: normal;
+  word-break: break-all; /* не поддерживает Opera12.14, значение keep-all не поддерживается IE, Chrome */
+  line-break: auto; /* нет поддержки для русского языка */
+  hyphens: manual;
 }
 
 .false-words {
   min-width: 199px;
   max-width: 200px;
+  overflow-wrap: break-word; /* не поддерживает IE, Firefox; является копией word-wrap */
+  word-wrap: normal;
+  word-break: break-all; /* не поддерживает Opera12.14, значение keep-all не поддерживается IE, Chrome */
+  line-break: auto; /* нет поддержки для русского языка */
+  hyphens: manual;
 }
 
 .is-hidden {
