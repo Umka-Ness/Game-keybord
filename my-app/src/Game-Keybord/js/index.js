@@ -238,8 +238,11 @@ function pushError(key) {
     console.log(error);
 
     wordsError.comparativeData += key;
-
-    coins.textContent = speed;
+    if (coins.textContent <= 0) {
+      return;
+    } else {
+      coins.textContent = speed;
+    }
 
     return;
   }
