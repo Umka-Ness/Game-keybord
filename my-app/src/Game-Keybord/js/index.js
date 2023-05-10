@@ -120,6 +120,7 @@ btn.addEventListener("click", (event) => {
   let min = 0;
   inputText.value = devList;
   btn.disabled = true;
+  inputUserText.disabled = true;
   const checTime = setInterval(() => {
     sec += 1;
     timer.textContent = min + "m " + sec + " sec";
