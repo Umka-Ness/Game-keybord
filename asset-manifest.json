@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Game-keybord/static/css/main.01513752.css",
+    "main.js": "/Game-keybord/static/js/main.5bc7065c.js",
+    "index.html": "/Game-keybord/index.html",
+    "main.01513752.css.map": "/Game-keybord/static/css/main.01513752.css.map",
+    "main.5bc7065c.js.map": "/Game-keybord/static/js/main.5bc7065c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.01513752.css",
+    "static/js/main.5bc7065c.js"
+  ]
+}
