@@ -432,6 +432,14 @@ body {
   }
 }
 
+.main-page {
+  display: flex;
+  justify-content: center;
+  min-width: 100vh;
+  min-height: 100vh;
+  background: #fff;
+}
+
 .backdrop {
   position: fixed;
   top: 0;
