@@ -433,11 +433,12 @@ body {
 }
 
 .main-page {
-  display: flex;
+  display: none;
   justify-content: center;
   min-width: 100vh;
   min-height: 100vh;
   background: #fff;
+  z-index: 100;
 }
 
 .backdrop {
