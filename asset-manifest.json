@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Game-keybord/static/css/main.01513752.css",
-    "main.js": "/Game-keybord/static/js/main.5bc7065c.js",
+    "main.css": "/Game-keybord/static/css/main.8e292807.css",
+    "main.js": "/Game-keybord/static/js/main.acdc4718.js",
     "index.html": "/Game-keybord/index.html",
-    "main.01513752.css.map": "/Game-keybord/static/css/main.01513752.css.map",
-    "main.5bc7065c.js.map": "/Game-keybord/static/js/main.5bc7065c.js.map"
+    "main.8e292807.css.map": "/Game-keybord/static/css/main.8e292807.css.map",
+    "main.acdc4718.js.map": "/Game-keybord/static/js/main.acdc4718.js.map"
   },
   "entrypoints": [
-    "static/css/main.01513752.css",
-    "static/js/main.5bc7065c.js"
+    "static/css/main.8e292807.css",
+    "static/js/main.acdc4718.js"
   ]
 }
