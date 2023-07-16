@@ -62,7 +62,6 @@ closeIco.addEventListener("click", (e) => {
 });
 
 yourErrorBtn.addEventListener("click", (e) => {
-  console.log(12312);
   modalError.classList.remove("is-hidden");
 });
 
@@ -109,7 +108,6 @@ function checkLocalStorage() {
     coins.textContent = localStorage.getItem(KEY);
     speed = JSON.parse(localStorage.getItem(KEY));
   } else {
-    console.log("No");
   }
 }
 function checkInput() {
@@ -146,7 +144,6 @@ btn.addEventListener("click", (event) => {
     if (textList.length === 0) {
       wordsError.data = wordsError.data.trim();
       findErrors();
-      console.log("error: " + error);
 
       clearInterval(checkList);
       clearInterval(checTime);
@@ -155,13 +152,11 @@ btn.addEventListener("click", (event) => {
       lengthCount.textContent = allWords.length;
       recordList.textContent = error;
       timerCount.textContent = timer.textContent;
-      console.log(wordsError);
       counterDoneWords();
       grade();
 
       addErrorsInModalErrors();
       if (sec >= textList.length / 3) {
-        console.log(textList.length / 3);
       }
       // меньше чем 12 и больше чем 10
       else if (sec <= textList.length / 3.5 && sec >= textList.length / 4) {
@@ -178,7 +173,6 @@ btn.addEventListener("click", (event) => {
 function addErrorsInModalErrors() {
   for (const i of wordsError.compare) {
     trueWords.textContent += i;
-    console.log(wordsError.compare);
   }
 
   for (const i of wordsError.error) {
@@ -235,7 +229,6 @@ function pushError(key) {
   } else {
     error += 1;
     speed -= 1;
-    console.log(error);
 
     wordsError.comparativeData += key;
     if (coins.textContent <= 0) {
@@ -261,7 +254,6 @@ function checText(key) {
 function speedTest() {
   const timeout = setInterval(() => {
     if (oldSpeed === 0) {
-      console.log(oldSpeed);
       if (localStorage.getItem(KEY) !== coins.textContent) {
         localStorage.setItem(KEY, speed);
       }
@@ -274,7 +266,6 @@ function speedTest() {
       oldSpeed = 0;
       speed += 1;
       coins.textContent = speed;
-      console.log(oldSpeed);
       addCoin();
     }
   }, 500);
@@ -316,7 +307,6 @@ function counterDoneWords() {
   } else {
     countProcentDone.textContent = countDone + " %";
   }
-  console.log(countDone);
 }
 
 function grade() {
@@ -334,5 +324,4 @@ function grade() {
   } else if (countDone < 0) {
     progress.textContent = "Try again";
   }
-  console.log(countDone);
 }
